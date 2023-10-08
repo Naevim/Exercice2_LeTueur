@@ -59,12 +59,10 @@ class Survivants {
 //
     InfligerDegatsAJason(degats) {
         jason.JasonPointsDeVie -= degats;
-        if (jason.JasonPointsDeVie <= 0) {
-            jason.JasonPointsDeVie = 0;
+        if (jason.JasonPointsDeVie <= 0) {};
             this.mourir();
         }
     }
-}
 
 // Attribution aléatoire des prénoms des survivants
 let nomsSurvivants = []; //Tableau qui permet de stocker le nom des survivants 
@@ -92,5 +90,5 @@ while (jason.JasonPointsDeVie > 0) {
 if (jason.JasonPointsDeVie <= 0) {
     console.log(`Jason est mort. [${caracteristiquesSurvivants.join(", ")}] ont gagné ! Mais RIP à [${morts.join(", ")}]`);//Il faudrait mettre le tableau morts dedans 
 } else {
-    console.log("Toute l'équipe a été vaincue. Jason a survécu avec", jason.JasonPointsDeVie, "points de vie.");
+    console.log("Toute l'équipe a été vaincue.");
 } 
